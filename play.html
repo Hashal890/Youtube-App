@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/YouTube_social_white_squircle.svg/1200px-YouTube_social_white_squircle.svg.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Play Video</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img
+          src="./assets/humburger.svg"
+          alt="Humburger"
+          class="whiteColor w5"
+        />
+        <div>
+          <img
+            src="./assets/logo.svg"
+            alt="Logo"
+            class="redColor w5"
+            onclick="homeReturn()"
+          />
+          <h1 onclick="homeReturn()">YouTube<sup>IN</sup></h1>
+        </div>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="query"
+          oninput="debounce(getSuggeData,1000)"
+          placeholder="Search"
+        />
+        <img src="./assets/search.svg" alt="Search" id="search" />
+      </div>
+      <div>
+        <img src="./assets/create.svg" alt="Create" class="whiteColor w4" />
+        <img src="./assets/grid.svg" alt="Your Apps" class="whiteColor w4" />
+        <img
+          src="./assets/bell.svg"
+          alt="Notifications"
+          class="whiteColor w4"
+        />
+        <img src="./assets/user.svg" alt="User" class="whiteColor w4" />
+      </div>
+    </nav>
+
+    <div id="videoData">
+      <iframe src="" frameborder="0"> </iframe>
+      <h1></h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  let videoData = JSON.parse(localStorage.getItem("videoData"));
+
+  let iframe = document.querySelector("iframe");
+  iframe.src = `https://www.youtube.com/embed/${videoData.videoId}`;
+  iframe.style.allow = "fullscreen";
+  let Title = document.createElement("h2");
+  Title.innerText = videoData.title;
+  let desc = document.createElement("p");
+  desc.innerText = videoData.description;
+  let videoShow = document.getElementById("videoData");
+  videoShow.innerHTML = null;
+  videoShow.append(iframe, Title, desc);
+
+  let homeReturn = () => {
+    window.location.href = "./index.html";
+  };
+</script>

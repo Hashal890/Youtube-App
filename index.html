@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/YouTube_social_white_squircle.svg/1200px-YouTube_social_white_squircle.svg.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>YouTube</title>
+  </head>
+  <body class="bg-dark">
+    <nav>
+      <div>
+        <img
+          src="./assets/humburger.svg"
+          alt="Humburger"
+          class="whiteColor w5"
+        />
+        <div>
+          <img
+            src="./assets/logo.svg"
+            alt="Logo"
+            class="redColor w5"
+            onclick="homeReturn()"
+          />
+          <h1 onclick="homeReturn()">YouTube<sup>IN</sup></h1>
+        </div>
+      </div>
+      <div>
+        <input type="text" id="query" placeholder="Search" />
+        <img
+          src="./assets/search.svg"
+          alt="Search"
+          id="search"
+          onclick="getData()"
+        />
+      </div>
+      <div>
+        <img src="./assets/create.svg" alt="Create" class="whiteColor w4" />
+        <img src="./assets/grid.svg" alt="Your Apps" class="whiteColor w4" />
+        <img
+          src="./assets/bell.svg"
+          alt="Notifications"
+          class="whiteColor w4"
+        />
+        <img src="./assets/user.svg" alt="User" class="whiteColor w4" />
+      </div>
+    </nav>
+    <div id="suggestionsData"></div>
+    <div id="youtubeData"></div>
+  </body>
+</html>
+
+<script src="./index.js"></script>
