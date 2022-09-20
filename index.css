@@ -150,3 +150,61 @@ nav > div:last-child {
   font-size: 16px;
   cursor: pointer;
 }
+
+@media (min-width: 100px) and (max-width: 600px) {
+  nav > div:first-child {
+    width: 50%;
+    font-size: 8px;
+  }
+  nav > :nth-child(2) {
+    width: 60%;
+  }
+  nav > div:last-child {
+    width: 10%;
+  }
+  #query {
+    font-size: 10px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 8px;
+  }
+  sup {
+    font-size: 5px;
+  }
+  #youtubeData {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  nav > div:first-child {
+    width: 20%;
+    font-size: 14px;
+  }
+  nav > :nth-child(2) {
+    width: 50%;
+  }
+  nav > div:last-child {
+    width: 15%;
+  }
+  #query {
+    font-size: 10px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 10px;
+  }
+  sup {
+    font-size: 10px;
+  }
+  #youtubeData {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
