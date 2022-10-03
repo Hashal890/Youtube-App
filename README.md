@@ -10,6 +10,16 @@ Hello everyone, here is my Youtube App project which I builded in unit-3 with th
 - Responsive layout.
 
 
+## Screenshots
+
+### 1. Home Page
+![Home Page](./assets/homePage.png)
+### 2. Search Results
+![Search Results](./assets/searchResults.png)
+### 3. Video Page
+![Video Page](./assets/videoView.png)
+
+
 ## Tech Stack
 
 In this project we used following tech stacks:- 
